@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Jade Lantern Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Name: [Your Full Name Here] | ID: [Your Student ID Here] -->
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">灯</span> Jade Lantern Market</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+    <span class="cart-pill" id="cart-pill">Cart (0)</span>
+  </div>
+</header>
+
+<main>
+  <section class="wrap section" style="padding-top: 2.6rem;">
+    <span class="eyebrow">We'd Love To Hear From You</span>
+    <h1>Questions about an order, a product, or a partnership?</h1>
+    <p>Whether you're wondering if a silk scarf runs true to size, want to check on a
+    shipment, or you run a shop and are interested in wholesale pricing, our small team
+    reads every message that comes through this page.</p>
+    <p>We reply to most emails within one business day, Monday through Friday. For
+    order-specific questions, please include your order number if you have one.</p>
+
+    <div class="contact-grid">
+      <div class="contact-form">
+        <h3>Send us a message</h3>
+        <div class="field">
+          <label for="contact-name">Full Name</label>
+          <input type="text" id="contact-name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="contact-email">Email Address</label>
+          <input type="email" id="contact-email" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" rows="5" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="handleContactSubmit()">Send Message</button>
+        <p id="form-msg" aria-live="polite"></p>
+      </div>
+
+      <div class="contact-info">
+        <h3>Other ways to reach us</h3>
+        <p>Prefer email or phone? Here's our direct information, along with a look
+        at the workshop district where most of our partners are based.</p>
+        <img src="https://picsum.photos/seed/jadelantern-office/700/420" alt="A small storefront office with paper lanterns hanging outside">
+        <ul class="info-list">
+          <li><b>Email</b><span>hello@jadelantern.example</span></li>
+          <li><b>Phone</b><span>+86 20 5555 0134</span></li>
+          <li><b>Hours</b><span>Mon–Fri, 9am–6pm (CST)</span></li>
+          <li><b>Address</b><span>18 Yuexiu Road, Guangzhou, China</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Jade Lantern Market</h4>
+      <p>Curated Chinese products — tea, silk, porcelain, and everyday tech — sourced
+      directly from workshops we've visited ourselves.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach Us</h4>
+      <ul>
+        <li>hello@jadelantern.example</li>
+        <li>+86 20 5555 0134</li>
+        <li>Mon–Fri, 9am–6pm (CST)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Jade Lantern Market. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

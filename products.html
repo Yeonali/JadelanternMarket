@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Jade Lantern Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Name: [Your Full Name Here] | ID: [Your Student ID Here] -->
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">灯</span> Jade Lantern Market</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <span class="cart-pill" id="cart-pill">Cart (0)</span>
+  </div>
+</header>
+
+<main>
+  <section class="wrap section" style="padding-top: 2.6rem;">
+    <span class="eyebrow">Full Catalogue</span>
+    <h1>Products, sourced and sampled by our own team.</h1>
+    <p>Every item below has been ordered, unboxed, and used by someone on our team
+    before it made the site. Prices include the cost of the quality check we run on
+    every batch — nothing here is drop-shipped sight-unseen.</p>
+    <p>Use the filters to jump straight to a category, or scroll through the full
+    range below. Tap <strong>Add to Cart</strong> on anything you like; the counter
+    in the header will update instantly.</p>
+
+    <div class="filter-bar">
+      <button type="button" class="active" onclick="filterProducts('all', this)">All</button>
+      <button type="button" onclick="filterProducts('tea', this)">Tea &amp; Teaware</button>
+      <button type="button" onclick="filterProducts('textiles', this)">Silk &amp; Textiles</button>
+      <button type="button" onclick="filterProducts('decor', this)">Porcelain &amp; Decor</button>
+      <button type="button" onclick="filterProducts('tech', this)">Everyday Tech</button>
+    </div>
+
+    <p id="cart-msg" aria-live="polite"></p>
+
+    <!-- Product grid: uses display: grid -->
+    <div class="product-grid">
+
+      <div class="product-card" data-category="tea">
+        <img src="https://picsum.photos/seed/product-oolong/500/380" alt="A bag of loose leaf oolong tea beside a small clay teapot">
+        <div class="product-body">
+          <span class="product-tag">Tea</span>
+          <h3>High-Mountain Oolong (100g)</h3>
+          <p>Hand-picked from Wuyi Mountain gardens and lightly roasted for a floral, honeyed finish.</p>
+          <div class="price-row">
+            <span class="price">$18.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('High-Mountain Oolong')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="tea">
+        <img src="https://picsum.photos/seed/product-teapot/500/380" alt="A hand-thrown purple clay Yixing teapot on a wooden tray">
+        <div class="product-body">
+          <span class="product-tag">Teaware</span>
+          <h3>Yixing Clay Teapot</h3>
+          <p>Unglazed zisha clay, hand-thrown in Yixing; improves the flavour of tea with every brew.</p>
+          <div class="price-row">
+            <span class="price">$42.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Yixing Clay Teapot')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="textiles">
+        <img src="https://picsum.photos/seed/product-scarf/500/380" alt="A folded red mulberry silk scarf with a floral pattern">
+        <div class="product-body">
+          <span class="product-tag">Silk</span>
+          <h3>Mulberry Silk Scarf</h3>
+          <p>100% mulberry silk, woven in Hangzhou and hand-finished with a rolled hem.</p>
+          <div class="price-row">
+            <span class="price">$36.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Mulberry Silk Scarf')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="textiles">
+        <img src="https://picsum.photos/seed/product-runner/500/380" alt="A jade green silk table runner laid across a dining table">
+        <div class="product-body">
+          <span class="product-tag">Silk</span>
+          <h3>Jade Silk Table Runner</h3>
+          <p>Machine-washable silk blend with a subtle brocade edge, 180cm long.</p>
+          <div class="price-row">
+            <span class="price">$28.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Jade Silk Table Runner')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="decor">
+        <img src="https://picsum.photos/seed/product-vase/500/380" alt="A blue and white porcelain vase with a floral design">
+        <div class="product-body">
+          <span class="product-tag">Porcelain</span>
+          <h3>Jingdezhen Porcelain Vase</h3>
+          <p>Hand-painted blue-and-white porcelain from Jingdezhen, the "porcelain capital."</p>
+          <div class="price-row">
+            <span class="price">$65.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Jingdezhen Porcelain Vase')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="decor">
+        <img src="https://picsum.photos/seed/product-lantern/500/380" alt="A red silk paper lantern with gold tassels">
+        <div class="product-body">
+          <span class="product-tag">Decor</span>
+          <h3>Silk Paper Lantern</h3>
+          <p>Collapsible bamboo-framed lantern with gold tassels, LED-safe and easy to hang.</p>
+          <div class="price-row">
+            <span class="price">$22.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Silk Paper Lantern')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="tech">
+        <img src="https://picsum.photos/seed/product-earbuds/500/380" alt="A pair of wireless earbuds in an open charging case">
+        <div class="product-body">
+          <span class="product-tag">Tech</span>
+          <h3>ClearSound Wireless Earbuds</h3>
+          <p>Bluetooth 5.3, active noise cancellation, and a 30-hour case battery.</p>
+          <div class="price-row">
+            <span class="price">$34.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('ClearSound Wireless Earbuds')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="tech">
+        <img src="https://picsum.photos/seed/product-charger/500/380" alt="A compact travel power bank and cable set">
+        <div class="product-body">
+          <span class="product-tag">Tech</span>
+          <h3>10,000mAh Travel Power Bank</h3>
+          <p>Slim aluminium body with fast-charge USB-C output, tested for 500+ cycles.</p>
+          <div class="price-row">
+            <span class="price">$26.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Travel Power Bank')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="decor">
+        <img src="https://picsum.photos/seed/product-cloisonne/500/380" alt="A cloisonné enamel bracelet with intricate patterns">
+        <div class="product-body">
+          <span class="product-tag">Decor</span>
+          <h3>Cloisonné Enamel Bracelet</h3>
+          <p>Hand-fired enamel over copper wire in a traditional Beijing workshop.</p>
+          <div class="price-row">
+            <span class="price">$30.00</span>
+            <button type="button" class="btn btn-primary" onclick="addToCart('Cloisonné Enamel Bracelet')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Jade Lantern Market</h4>
+      <p>Curated Chinese products — tea, silk, porcelain, and everyday tech — sourced
+      directly from workshops we've visited ourselves.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach Us</h4>
+      <ul>
+        <li>hello@jadelantern.example</li>
+        <li>+86 20 5555 0134</li>
+        <li>Mon–Fri, 9am–6pm (CST)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Jade Lantern Market. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
